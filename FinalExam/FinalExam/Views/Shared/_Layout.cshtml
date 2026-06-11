@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Steak House - Free HTML Template</title>
+    <!--
+
+    Tooplate 2083 Steak House
+
+    https://www.tooplate.com/view/2083-steak-house
+
+    -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- stylesheets css -->
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/assets/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="~/assets/css/animate.min.css">
+    <link rel="stylesheet" href="~/assets/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="~/assets/css/nivo-lightbox.css">
+    <link rel="stylesheet" href="~/assets/css/nivo_themes/default/default.css">
+
+    <link rel="stylesheet" href="~/assets/css/hover-min.css">
+    <link rel="stylesheet" href="~/assets/css/flexslider.css">
+
+    <link rel="stylesheet" href="~/assets/css/style.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600' rel='stylesheet' type='text/css'>
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+    <!-- Preloader section -->
+    <div class="preloader">
+        <div class="sk-spinner sk-spinner-pulse"></div>
+    </div>
+
+
+    <!-- Home section -->
+    <section id="home" class="parallax-section">
+        <div class="gradient-overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-offset-2 col-md-8 col-sm-12">
+                    <h1 class="wow fadeInUp" data-wow-delay="0.6s">Steak House</h1>
+                    <p class="wow fadeInUp" data-wow-delay="1.0s">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Dolore magna aliquam erat volutpat.</p>
+                    <a href="#feature" class="wow fadeInUp btn btn-default hvr-bounce-to-top smoothScroll" data-wow-delay="1.3s">Discover Now</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Navigation section -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">Steak House</a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#top" class="smoothScroll">Home</a></li>
+                    <li><a href="#feature" class="smoothScroll">Features</a></li>
+                    <li><a href="#about" class="smoothScroll">About</a></li>
+                    <li><a href="#menu" class="smoothScroll">Menu</a></li>
+                    <li><a href="#team" class="smoothScroll">Team</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="#team" class="smoothScroll">@User.Identity.Name</a></li>
+                        <li><a asp-action="Logout" asp-controller="Account" class="smoothScroll">Logout</a></li>
+
+                    }
+                    else
+                    {
+                        <li><a asp-action="Register" asp-controller="Account"  class="smoothScroll">Register</a></li>
+                        <li><a asp-action="Login" asp-controller="Account" class="smoothScroll">Login</a></li>
+                    }
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    @RenderBody()
+
+
+
+
+    <!-- Footer section -->
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1.3s">
+                    <h3>About the house</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                        tincidunt ut laoreet. Dolore magna aliquam erat volutpat ipsum.
+                    </p>
+                </div>
+
+                <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1.6s">
+                    <h3>Contact Detail</h3>
+                    <p>123 Delicious Street, San Francisco, CA 10110</p>
+                    <p>010-020-0780</p>
+                    <p>hello@company.com</p>
+                </div>
+
+                <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1.9s">
+                    <h3>Opening Hours</h3>
+                    <strong>Monday - Firday</strong>
+                    <p>11:00 AM - 10:00 PM</p>
+                    <strong>Saturday - Sunday</strong>
+                    <p>10:00 AM - 09:00 PM</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright section -->
+    <section id="copyright">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <p>
+                        Copyright © 2019 Steak House Company
+
+                        - Design: <a rel="nofollow" class="designed-by" href="https://www.tooplate.com">Tooplate</a>
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-4 text-right">
+                    <a href="#top" class="fa fa-angle-up smoothScroll gototop"></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- javscript js -->
+    <script src="~/assets/js/jquery.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+
+    <script src="~/assets/js/jquery.magnific-popup.min.js"></script>
+
+    <script src="~/assets/js/jquery.sticky.js"></script>
+    <script src="~/assets/js/jquery.backstretch.min.js"></script>
+
+    <script src="~/assets/js/isotope.js"></script>
+    <script src="~/assets/js/imagesloaded.min.js"></script>
+    <script src="~/assets/js/nivo-lightbox.min.js"></script>
+
+    <script src="~/assets/js/jquery.flexslider-min.js"></script>
+
+    <script src="~/assets/js/jquery.parallax.js"></script>
+    <script src="~/assets/js/smoothscroll.js"></script>
+    <script src="~/assets/js/wow.min.js"></script>
+
+    <script src="~/assets/js/custom.js"></script>
+
+</body>
+</html>
